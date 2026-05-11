@@ -28,6 +28,18 @@ const JSBI = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [activeVideoSrc, setActiveVideoSrc] = useState(null);
+
+  const openVideoModal = (src) => {
+    setActiveVideoSrc(src);
+    setIsVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoModalOpen(false);
+    setTimeout(() => setActiveVideoSrc(null), 300);
+  };
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -414,11 +426,15 @@ const JSBI = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition shadow-2xl hover:shadow-orange-500/50 flex items-center justify-center space-x-2">
+                <button 
+                  onClick={() => openVideoModal('/2026-02-26-002256024.mp4')}
+                  className="group bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition shadow-2xl hover:shadow-orange-500/50 flex items-center justify-center space-x-2">
                   <span>Explore Programs</span>
                   <LuArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
                 </button>
-                <button className="group bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl flex items-center justify-center space-x-2">
+                <button 
+                  onClick={() => openVideoModal('/JSBI VIRTUAL TOUR.mp4')}
+                  className="group bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl flex items-center justify-center space-x-2">
                   <LuPlay className="w-5 h-5" />
                   <span>Watch Video</span>
                 </button>
@@ -990,6 +1006,42 @@ const JSBI = () => {
                   </button>
                 </div>
               </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeVideoModal}
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-black rounded-2xl shadow-2xl max-w-5xl w-full relative overflow-hidden flex flex-col"
+            >
+              <button
+                onClick={closeVideoModal}
+                className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl z-10 bg-black/50 w-10 h-10 rounded-full flex items-center justify-center pb-1 leading-none"
+              >
+                &times;
+              </button>
+              {activeVideoSrc && (
+                <video 
+                  src={activeVideoSrc} 
+                  controls 
+                  autoPlay 
+                  className="w-full h-auto max-h-[85vh] object-contain bg-black"
+                />
+              )}
             </motion.div>
           </motion.div>
         )}
