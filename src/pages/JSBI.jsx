@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   LuMenu, 
   LuX, 
@@ -26,7 +27,6 @@ import { FaXTwitter } from 'react-icons/fa6';
 const JSBI = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeTab, setActiveTab] = useState('all');
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [activeVideoSrc, setActiveVideoSrc] = useState(null);
@@ -47,154 +47,6 @@ const JSBI = () => {
     program: '',
     documents: null
   });
-  const [programImages, setProgramImages] = useState({
-    0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0
-  });
-
-  const imagesByCategory = {
-    food: [
-      '/Food/IMG_00258.JPG',
-      '/Food/IMG_00508.JPG',
-      '/Food/IMG_00678.JPG',
-      '/Food/IMG_00688.JPG',
-      '/Food/IMG_00698.JPG',
-      '/Food/IMG_0089.JPG'
-    ],
-    baking: [
-      '/Baking/allen-rad-JBIK4QZOFfc-unsplash.jpg',
-      '/Baking/american-heritage-chocolate-vdx5hPQhXFk-unsplash.jpg',
-      '/Baking/annie-spratt-EACvtuV2k2E-unsplash.jpg',
-      '/Baking/annie-spratt-XyBeP4K9Vzs-unsplash.jpg',
-      '/Baking/charles-chen-w2ZFjDnUL3w-unsplash.jpg'
-    ],
-    coffee: [
-      '/Coffee/IMG_0176.JPG',
-      '/Coffee/IMG_0319.JPG',
-      '/Coffee/IMG_0691.JPG',
-      '/Coffee/IMG_0697.JPG',
-      '/Coffee/IMG_0766.JPG',
-      '/Coffee/IMG_1379.JPG'
-    ],
-    fashion: [
-      '/Fashion/christian-agbede-EiYH9QupDls-unsplash.jpg',
-      '/Fashion/christian-agbede-ukoyiWGdz2k-unsplash.jpg',
-      '/Fashion/karsten-winegeart-pMLaE6C76Ms-unsplash.jpg',
-      '/Fashion/malicki-m-beser-PKMvkg7vnUo-unsplash.jpg',
-      '/Fashion/oladimeji-odunsi-Wu3yqve2gnc-unsplash.jpg'
-    ],
-    beauty: [
-      '/Beauty/ashley-smith-RGWutmrg4rY-unsplash.jpg',
-      '/Beauty/chris-quintana-gsng44sj-FE-unsplash.jpg',
-      '/Beauty/jamie-street-aMuq-Xz7R_M-unsplash.jpg',
-      '/Beauty/jazmin-quaynor-FoeIOgztCXo-unsplash.jpg',
-      '/Beauty/manu-camargo-BkaD07QEiJc-unsplash.jpg'
-    ],
-    ict: [
-      '/ICT/ben-iwara-p9-zw6CyMrU-unsplash.jpg',
-      '/ICT/boitumelo-5qvBHCflHyM-unsplash.jpg',
-      '/ICT/boitumelo-mZ-vSMus7zM-unsplash.jpg',
-      '/ICT/brian-j-tromp-T5Us4Q9JMZk-unsplash.jpg'
-    ],
-    business: [
-      '/Business/IMG_2730.JPG',
-      '/Business/madib-zikri-ZPKPxTlIjLA-unsplash.jpg',
-      '/Business/ninthgrid-hdfPDesgEw8-unsplash.jpg',
-      '/Business/ninthgrid-wCfWNod54JU-unsplash.jpg',
-      '/Business/steward-masweneng-uMBf3Nt_N_g-unsplash.jpg',
-      '/Business/the-jopwell-collection-0QvOpmEEYNE-unsplash.jpg'
-    ],
-    mixology: [
-      '/Mixology/IMG_0419.JPG',
-      '/Mixology/IMG_0771.JPG',
-      '/Mixology/IMG_0998.JPG',
-      '/Mixology/IMG_1002.JPG',
-      '/Mixology/IMG_1334.JPG',
-      '/Mixology/IMG_1714.JPG'
-    ]
-  };
-
-  const programs = [
-    {
-      category: 'culinary',
-      title: 'Culinary Arts',
-      icon: LuChefHat,
-      duration: '6-12 Months',
-      level: 'Certificate & Diploma',
-      description: 'Master the art of cooking with hands-on training in professional kitchens.',
-      color: 'from-orange-500 to-red-600',
-      imageFolder: 'food'
-    },
-    {
-      category: 'culinary',
-      title: 'Pastry & Baking',
-      icon: LuCoffee,
-      duration: '4-8 Months',
-      level: 'Certificate',
-      description: 'Learn the craft of pastry making, cake decoration, and artisan baking.',
-      color: 'from-pink-500 to-rose-600',
-      imageFolder: 'baking'
-    },
-    {
-      category: 'culinary',
-      title: 'Barista Skills',
-      icon: LuCoffee,
-      duration: '2-3 Months',
-      level: 'Certificate',
-      description: 'Perfect your coffee-making skills and latte art techniques.',
-      color: 'from-amber-600 to-orange-700',
-      imageFolder: 'coffee'
-    },
-    {
-      category: 'fashion',
-      title: 'Fashion & Design',
-      icon: LuPalette,
-      duration: '12 Months',
-      level: 'Diploma',
-      description: 'Create stunning fashion designs and learn garment construction.',
-      color: 'from-purple-500 to-pink-600',
-      imageFolder: 'fashion'
-    },
-    {
-      category: 'fashion',
-      title: 'Hairdressing & Beauty',
-      icon: LuPalette,
-      duration: '12 Months',
-      level: 'Diploma',
-      description: 'Master professional hairdressing and beauty therapy techniques.',
-      color: 'from-fuchsia-500 to-purple-600',
-      imageFolder: 'beauty'
-    },
-    {
-      category: 'tech',
-      title: 'ICT & Computer Skills',
-      icon: LuLaptop,
-      duration: '3-6 Months',
-      level: 'Certificate',
-      description: 'Build essential digital skills for the modern workplace.',
-      color: 'from-blue-500 to-cyan-600',
-      imageFolder: 'ict'
-    },
-    {
-      category: 'business',
-      title: 'Business Management',
-      icon: LuTrendingUp,
-      duration: '6 Months',
-      level: 'Certificate',
-      description: 'Develop entrepreneurial skills and business acumen.',
-      color: 'from-green-500 to-emerald-600',
-      imageFolder: 'business'
-    },
-    {
-      category: 'culinary',
-      title: 'Mixology',
-      icon: LuCoffee,
-      duration: '2-3 Months',
-      level: 'Certificate',
-      description: 'Learn professional bartending and cocktail creation.',
-      color: 'from-teal-500 to-cyan-600',
-      imageFolder: 'mixology'
-    }
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -204,38 +56,12 @@ const JSBI = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const timeouts = [];
-    const intervals = [];
-
-    programs.forEach((program, index) => {
-      const timeoutId = setTimeout(() => {
-        const intervalId = setInterval(() => {
-          setProgramImages(prev => {
-            const images = imagesByCategory[program.imageFolder];
-            if (!images || images.length === 0) return prev;
-            return {
-              ...prev,
-              [index]: (prev[index] + 1) % images.length
-            };
-          });
-        }, 10000);
-        intervals.push(intervalId);
-      }, index * 1250);
-      timeouts.push(timeoutId);
-    });
-
-    return () => {
-      timeouts.forEach(id => clearTimeout(id));
-      intervals.forEach(id => clearInterval(id));
-    };
-  }, []);
-
-  const stats = [
-    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' },
-    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' },
-    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' },
-    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' }
+  const statLogos = [
+    '/UBITEB.png',
+    '/GES.png',
+    '/MoES1.png',
+    '/NCHE_LOGO.png',
+    '/Coat_of_arms_of_Uganda.svg.png'
   ];
 
   const partners = [
@@ -273,10 +99,6 @@ const JSBI = () => {
       icon: LuArrowRight
     }
   ];
-
-  const filteredPrograms = activeTab === 'all' 
-    ? programs 
-    : programs.filter(p => p.category === activeTab);
 
   const handleFormChange = (e) => {
     const { name, value, files } = e.target;
@@ -321,9 +143,9 @@ const JSBI = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <a href="#programs" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
+              <Link to="/programs" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
                 Programs
-              </a>
+              </Link>
               <a href="#faculty" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
                 Faculty
               </a>
@@ -362,7 +184,7 @@ const JSBI = () => {
                 className="lg:hidden mt-4 pb-4 border-t border-white/20"
               >
                 <div className="flex flex-col space-y-3 pt-4">
-                  <a href="#programs" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Programs</a>
+                  <Link to="/programs" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Programs</Link>
                   <a href="#faculty" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Faculty</a>
                   <a href="#admissions" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Admissions</a>
                   <a href="#about" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>About</a>
@@ -451,117 +273,23 @@ const JSBI = () => {
       {/* Stats Section */}
       <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center min-h-[120px]">
+            {statLogos.map((logo, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="flex items-center justify-center w-full h-full"
               >
-                <div className="text-5xl md:text-6xl font-bold text-orange-500 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-xl font-semibold text-white mb-1">
-                  {stat.label}
-                </div>
-                <div className="text-sm text-gray-400">
-                  {stat.sublabel}
-                </div>
+                <img 
+                  src={logo} 
+                  alt="Partner Logo" 
+                  className="max-h-24 max-w-[140px] w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                />
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Programs Section */}
-      <section id="programs" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="h-1 w-12 bg-orange-600"></div>
-              <span className="text-orange-600 font-bold tracking-wider uppercase text-sm">
-                Our Programs
-              </span>
-              <div className="h-1 w-12 bg-orange-600"></div>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Build Your Career,
-              <span className="text-orange-600"> Choose Your Path</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Practical skills training designed for real-world success
-            </p>
-          </motion.div>
-
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {[
-              { id: 'all', label: 'All Programs' },
-              { id: 'culinary', label: 'Culinary Arts' },
-              { id: 'fashion', label: 'Fashion & Beauty' },
-              { id: 'tech', label: 'Technology' },
-              { id: 'business', label: 'Business' }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                  activeTab === tab.id
-                    ? 'bg-orange-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Programs Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {filteredPrograms.map((program, index) => {
-              const programIndex = programs.findIndex(p => p.title === program.title);
-              const images = imagesByCategory[program.imageFolder] || [];
-              const currentImageIndex = programImages[programIndex] || 0;
-              
-              return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col min-h-[380px]"
-              >
-                <div className="relative h-40">
-                  <img
-                    src={images.length > 0 ? images[currentImageIndex % images.length] : '/Food/IMG_0089.JPG'}
-                    alt={`${program.title} showcase`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className={`absolute top-4 left-4 w-14 h-14 rounded-xl bg-white/90 flex items-center justify-center shadow-lg`}> 
-                    <program.icon className={`w-7 h-7 text-orange-600`} />
-                  </div>
-                </div>
-                <div className={`h-1 bg-gradient-to-r ${program.color}`}></div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition">
-                    {program.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                    {program.description}
-                  </p>
-                </div>
-              </motion.div>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -838,7 +566,7 @@ const JSBI = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#programs" className="text-gray-400 hover:text-orange-500 transition">Programs</a></li>
+                <li><Link to="/programs" className="text-gray-400 hover:text-orange-500 transition">Programs</Link></li>
                 <li><a href="#faculty" className="text-gray-400 hover:text-orange-500 transition">Faculty</a></li>
                 <li><a href="#admissions" className="text-gray-400 hover:text-orange-500 transition">Admissions</a></li>
                 <li><a href="#about" className="text-gray-400 hover:text-orange-500 transition">About Us</a></li>
