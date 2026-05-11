@@ -232,10 +232,10 @@ const JSBI = () => {
   }, []);
 
   const stats = [
-    { number: '500+', label: 'Graduates', sublabel: 'Success Stories' },
-    { number: '95%', label: 'Employment Rate', sublabel: 'Within 6 Months' },
-    { number: '15+', label: 'Programs', sublabel: 'Career Pathways' },
-    { number: '20+', label: 'Industry Partners', sublabel: 'Job Placement' }
+    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' },
+    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' },
+    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' },
+    { number: '\u00A0', label: '\u00A0', sublabel: '\u00A0' }
   ];
 
   const partners = [
