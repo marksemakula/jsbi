@@ -622,7 +622,7 @@ const JSBI = () => {
             >
               <div className="relative">
                 <img
-                  src="/premium_photo-1724026586579-5c413598de2c.avif"
+                  src="/premium_photo-1724026586579-5c413598de2c.jpg"
                   alt="Students in class"
                   className="rounded-2xl shadow-2xl"
                 />
