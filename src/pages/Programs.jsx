@@ -45,8 +45,8 @@ const Programs = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-            ? 'bg-white shadow-lg py-3'
-            : 'bg-gradient-to-r from-orange-600 to-red-600 py-5'
+          ? 'bg-white shadow-lg py-3'
+          : 'bg-gradient-to-r from-orange-600 to-red-600 py-5'
           }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,6 +61,9 @@ const Programs = () => {
             </div>
 
             <div className="hidden lg:flex items-center space-x-8">
+              <Link to="/" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
+                Home
+              </Link>
               <Link to="/programs" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
                 Programs
               </Link>
@@ -90,6 +93,7 @@ const Programs = () => {
                 className="lg:hidden mt-4 pb-4 border-t border-white/20"
               >
                 <div className="flex flex-col space-y-3 pt-4">
+                  <Link to="/" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Home</Link>
                   <Link to="/programs" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Programs</Link>
                   <a href="/#faculty" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Faculty</a>
                   <a href="/#admissions" className={`font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}>Admissions</a>
@@ -122,13 +126,13 @@ const Programs = () => {
                       transition={{ delay: index * 0.1 }}
                       onClick={() => setActiveDoc(doc)}
                       className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all duration-200 group ${activeDoc.id === doc.id
-                          ? 'bg-orange-50 text-orange-700 shadow-sm'
-                          : 'text-gray-600 hover:bg-gray-50'
+                        ? 'bg-orange-50 text-orange-700 shadow-sm'
+                        : 'text-gray-600 hover:bg-gray-50'
                         }`}
                     >
                       <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${activeDoc.id === doc.id
-                          ? 'bg-orange-600 text-white'
-                          : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'
+                        ? 'bg-orange-600 text-white'
+                        : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'
                         }`}>
                         <LuFileText className="w-4 h-4" />
                       </div>
