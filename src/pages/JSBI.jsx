@@ -312,7 +312,7 @@ const JSBI = () => {
             {/* Brand Title */}
             <div className="flex flex-col">
               <h1 className={`text-xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-                Jimmy Ssekasi Business Institute
+                Jimmy Sekasi Business Institute
               </h1>
               <p className={`text-xs font-medium tracking-wider ${scrolled ? 'text-orange-600' : 'text-orange-100'}`}>
                 SKILLS FOR LIFE, CAREERS FOR TOMORROW
@@ -382,8 +382,8 @@ const JSBI = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/JimmySsekasi.png"
-            alt="Jimmy Ssekasi Business Institute"
+            src="/JimmySekasi.png"
+            alt="Jimmy Sekasi Business Institute"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-orange-900/95 via-red-900/90 to-orange-800/85"></div>
@@ -402,7 +402,7 @@ const JSBI = () => {
             >
               <div className="mb-6">
                 <img
-                  src="/Jimmy Ssekasi Business Institute Logo.png"
+                  src="/Jimmy Sekasi Business Institute Logo.png"
                   alt="JSBI Logo"
                   className="h-48 w-auto drop-shadow-2xl"
                 />
@@ -798,7 +798,7 @@ const JSBI = () => {
             {/* About */}
             <div className="md:col-span-2">
               <img
-                src="/Jimmy Ssekasi Business Institute Logo.png"
+                src="/Jimmy Sekasi Business Institute Logo.png"
                 alt="JSBI Logo"
                 className="h-28 w-auto mb-4"
               />
