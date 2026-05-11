@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  LuMenu, 
-  LuX, 
+import {
+  LuMenu,
+  LuX,
   LuChevronRight,
   LuArrowRight,
   LuGraduationCap,
@@ -123,11 +123,10 @@ const JSBI = () => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white shadow-lg py-3' 
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+            ? 'bg-white shadow-lg py-3'
             : 'bg-gradient-to-r from-orange-600 to-red-600 py-5'
-        }`}
+          }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -158,7 +157,7 @@ const JSBI = () => {
               <a href="#contact" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
                 Contact
               </a>
-              <button 
+              <button
                 onClick={() => setIsApplyModalOpen(true)}
                 className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition font-semibold shadow-lg hover:shadow-xl">
                 Apply Now
@@ -235,26 +234,26 @@ const JSBI = () => {
                   Transform Your Future
                 </span>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 Skills You Can
                 <span className="block text-orange-400">Build On.</span>
               </h1>
-              
+
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                At JSBI, education is about understanding a complex world, thinking critically, 
-                and building practical skills that transform lives and communities. Choose from 
+                At JSBI, education is about understanding a complex world, thinking critically,
+                and building practical skills that transform lives and communities. Choose from
                 certificates and diplomas in culinary arts, fashion, technology, and business.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
+                <button
                   onClick={() => openVideoModal('/2026-02-26-002256024.mp4')}
                   className="group bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition shadow-2xl hover:shadow-orange-500/50 flex items-center justify-center space-x-2">
                   <span>Explore Programs</span>
                   <LuArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
                 </button>
-                <button 
+                <button
                   onClick={() => openVideoModal('/JSBI VIRTUAL TOUR.mp4')}
                   className="group bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl flex items-center justify-center space-x-2">
                   <LuPlay className="w-5 h-5" />
@@ -270,7 +269,7 @@ const JSBI = () => {
 
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section – NOW FULL COLOR */}
       <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center min-h-[120px]">
@@ -283,10 +282,10 @@ const JSBI = () => {
                 viewport={{ once: true }}
                 className="flex items-center justify-center w-full h-full"
               >
-                <img 
-                  src={logo} 
-                  alt="Partner Logo" 
-                  className="max-h-24 max-w-[140px] w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                <img
+                  src={logo}
+                  alt="Partner Logo"
+                  className="max-h-24 max-w-[140px] w-auto object-contain transition-all duration-300"
                 />
               </motion.div>
             ))}
@@ -314,12 +313,12 @@ const JSBI = () => {
                 <span className="text-orange-600"> Whole Person</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                In a deliberate plan to build a hybrid mid-level training college, GES took over 
-                JSBI to intentionally impart contemporary skills to young men and women of all walks 
-                of life, to enhance their potential in being more relevant to their families and 
+                In a deliberate plan to build a hybrid mid-level training college, GES took over
+                JSBI to intentionally impart contemporary skills to young men and women of all walks
+                of life, to enhance their potential in being more relevant to their families and
                 communities and be direct partakers in their career destiny.
               </p>
-              
+
               <div className="space-y-6">
                 {[
                   {
@@ -411,7 +410,7 @@ const JSBI = () => {
             <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
             {/* Right fade mask */}
             <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent"></div>
-            
+
             <div className="flex overflow-hidden">
               <motion.div
                 className="flex gap-12 items-center"
@@ -531,7 +530,7 @@ const JSBI = () => {
                 className="h-28 w-auto mb-4"
               />
               <p className="text-gray-400 mb-6">
-                Empowering young men and women with contemporary skills for careers in 
+                Empowering young men and women with contemporary skills for careers in
                 culinary arts, fashion, technology, and business.
               </p>
               <div className="social-icons flex flex-wrap items-center gap-3">
@@ -763,10 +762,10 @@ const JSBI = () => {
                 &times;
               </button>
               {activeVideoSrc && (
-                <video 
-                  src={activeVideoSrc} 
-                  controls 
-                  autoPlay 
+                <video
+                  src={activeVideoSrc}
+                  controls
+                  autoPlay
                   className="w-full h-auto max-h-[85vh] object-contain bg-black"
                 />
               )}
