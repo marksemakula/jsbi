@@ -274,9 +274,9 @@ const JSBI = () => {
       </section>
 
       {/* Stats Section – NOW FULL COLOR */}
-      <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center min-h-[120px]">
+      <section className="relative py-10 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center min-h-[70px]">
             {statLogos.map((logo, index) => (
               <motion.div
                 key={index}
@@ -289,7 +289,7 @@ const JSBI = () => {
                 <img
                   src={logo}
                   alt="Partner Logo"
-                  className="max-h-24 max-w-[140px] w-auto object-contain transition-all duration-300"
+                  className="max-h-16 max-w-[120px] w-auto object-contain transition-all duration-300"
                 />
               </motion.div>
             ))}
