@@ -497,19 +497,13 @@ const JSBI = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
+      <section className="py-20 bg-[#404040]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-xl text-orange-100 mb-8">
-              Join hundreds of graduates who have transformed their lives through practical skills training
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
                 Apply Now
@@ -523,9 +517,11 @@ const JSBI = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white pt-16 pb-4">
+      <footer>
+        {/* Upper Footer - white background, dark text */}
+        <div className="bg-white text-gray-900 pt-16 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="grid md:grid-cols-4 gap-12">
             {/* About */}
             <div className="md:col-span-2">
               <img
@@ -533,33 +529,33 @@ const JSBI = () => {
                 alt="JSBI Logo"
                 className="h-28 w-auto mb-4"
               />
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-700 mb-6">
                 Empowering young men and women with contemporary skills for careers in
                 culinary arts, fashion, technology, and business.
               </p>
               <div className="social-icons flex flex-wrap items-center gap-3">
-                <a href="https://discord.gg/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://discord.gg/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaDiscord className="w-5 h-5" />
                 </a>
-                <a href="https://instagram.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://instagram.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaInstagram className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com/company/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://linkedin.com/company/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaLinkedin className="w-5 h-5" />
                 </a>
-                <a href="https://slack.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://slack.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaSlack className="w-5 h-5" />
                 </a>
-                <a href="https://youtube.com/@ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://youtube.com/@ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaYoutube className="w-5 h-5" />
                 </a>
-                <a href="https://x.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://x.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaXTwitter className="w-5 h-5" />
                 </a>
-                <a href="https://wa.me/256" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://wa.me/256" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaWhatsapp className="w-5 h-5" />
                 </a>
-                <a href="https://t.me/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <a href="https://t.me/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaTelegram className="w-5 h-5" />
                 </a>
               </div>
@@ -569,13 +565,13 @@ const JSBI = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><Link to="/programs" className="text-gray-400 hover:text-orange-500 transition">Programs</Link></li>
-                <li><a href="#faculty" className="text-gray-400 hover:text-orange-500 transition">Faculty</a></li>
-                <li><a href="#admissions" className="text-gray-400 hover:text-orange-500 transition">Admissions</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-orange-500 transition">About Us</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-orange-500 transition">Contact</a></li>
-                <li><a href="/blog" className="text-gray-400 hover:text-orange-500 transition">Blog</a></li>
-                <li><a href="/students-guild" className="text-gray-400 hover:text-orange-500 transition">Students Guild</a></li>
+                <li><Link to="/programs" className="text-gray-700 hover:text-orange-600 transition">Programs</Link></li>
+                <li><a href="#faculty" className="text-gray-700 hover:text-orange-600 transition">Faculty</a></li>
+                <li><a href="#admissions" className="text-gray-700 hover:text-orange-600 transition">Admissions</a></li>
+                <li><a href="#about" className="text-gray-700 hover:text-orange-600 transition">About Us</a></li>
+                <li><a href="#contact" className="text-gray-700 hover:text-orange-600 transition">Contact</a></li>
+                <li><a href="/blog" className="text-gray-700 hover:text-orange-600 transition">Blog</a></li>
+                <li><a href="/students-guild" className="text-gray-700 hover:text-orange-600 transition">Students Guild</a></li>
               </ul>
             </div>
 
@@ -584,38 +580,43 @@ const JSBI = () => {
               <h3 className="text-lg font-bold mb-4">Contact Us</h3>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <LuMapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" />
-                  <span className="text-gray-400">Kampala, Uganda</span>
+                  <LuMapPin className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Kampala, Uganda</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <LuPhone className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                  <span className="text-gray-400">+256756241530  +256772472570</span>
+                  <LuPhone className="w-5 h-5 text-orange-600 flex-shrink-0" />
+                  <span className="text-gray-700">+256756241530  +256772472570</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <LuMail className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                  <span className="text-gray-400">info@jsbi.ac.ug</span>
+                  <LuMail className="w-5 h-5 text-orange-600 flex-shrink-0" />
+                  <span className="text-gray-700">info@jsbi.ac.ug</span>
                 </li>
               </ul>
             </div>
           </div>
+          </div>
+        </div>
 
-          {/* Bottom Bar */}
-          <div className="pt-2 pb-2 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              © 2026 Jimmy Sekasi Business Institute. All rights reserved.
-            </p>
-            <div className="flex items-center gap-8">
-              <div className="flex space-x-6 text-sm">
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition">Privacy Policy</a>
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition">Terms of Service</a>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-gray-300 font-urbanist text-sm">Powered by</span>
-                <img
-                  src="/Inzozi-grayscale.png"
-                  alt="Inzozi Logo"
-                  className="h-16 w-auto brightness-0 invert"
-                />
+        {/* Bottom Bar - #800020 background, white text */}
+        <div className="bg-[#800020] text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-white/90 text-sm">
+                © 2026 Jimmy Sekasi Business Institute. All rights reserved.
+              </p>
+              <div className="flex items-center gap-8">
+                <div className="flex space-x-6 text-sm">
+                  <a href="#" className="text-white/90 hover:text-white transition">Privacy Policy</a>
+                  <a href="#" className="text-white/90 hover:text-white transition">Terms of Service</a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <span className="text-white font-urbanist text-sm">Powered by</span>
+                  <img
+                    src="/Inzozi-grayscale.png"
+                    alt="Inzozi Logo"
+                    className="h-16 w-auto brightness-0 invert"
+                  />
+                </div>
               </div>
             </div>
           </div>
