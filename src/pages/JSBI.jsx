@@ -433,12 +433,12 @@ const JSBI = () => {
                 {[...partners, ...partners].map((partner, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-40 h-24 flex items-center justify-center"
+                    className="group flex-shrink-0 w-28 h-16 flex items-center justify-center"
                   >
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-w-full max-h-full object-contain px-4"
+                      className="max-w-full max-h-full object-contain px-4 grayscale group-hover:grayscale-0 transition duration-300"
                     />
                   </div>
                 ))}
