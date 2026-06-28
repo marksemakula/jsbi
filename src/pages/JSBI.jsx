@@ -21,7 +21,7 @@ import {
   LuTrendingUp,
   LuClock
 } from 'react-icons/lu';
-import { FaDiscord, FaInstagram, FaLinkedin, FaSlack, FaYoutube, FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import { FaDiscord, FaInstagram, FaLinkedin, FaSlack, FaYoutube, FaWhatsapp, FaTelegram, FaTiktok } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const JSBI = () => {
@@ -534,29 +534,17 @@ const JSBI = () => {
                 culinary arts, fashion, technology, and business.
               </p>
               <div className="social-icons flex flex-wrap items-center gap-3">
-                <a href="https://discord.gg/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
-                  <FaDiscord className="w-5 h-5" />
-                </a>
-                <a href="https://instagram.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
-                  <FaInstagram className="w-5 h-5" />
-                </a>
-                <a href="https://linkedin.com/company/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
-                  <FaLinkedin className="w-5 h-5" />
-                </a>
-                <a href="https://slack.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
-                  <FaSlack className="w-5 h-5" />
-                </a>
-                <a href="https://youtube.com/@ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
-                  <FaYoutube className="w-5 h-5" />
-                </a>
-                <a href="https://x.com/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
+                <a href="https://x.com/JimmySekasi01" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
                   <FaXTwitter className="w-5 h-5" />
                 </a>
-                <a href="https://wa.me/256" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
-                  <FaWhatsapp className="w-5 h-5" />
+                <a href="https://www.instagram.com/jimmy_sekasi?igsh=NjhkYmFydmZoajR1" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
+                  <FaInstagram className="w-5 h-5" />
                 </a>
-                <a href="https://t.me/ges" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
-                  <FaTelegram className="w-5 h-5" />
+                <a href="https://youtube.com/@jimmysekasibusinessinstitute?si=mgvhl3oyRneB1jJ4" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
+                  <FaYoutube className="w-5 h-5" />
+                </a>
+                <a href="https://www.tiktok.com/@jimmy.sekasi?_r=1&_t=ZS-97XNlUDtmVk" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
+                  <FaTiktok className="w-5 h-5" />
                 </a>
               </div>
             </div>

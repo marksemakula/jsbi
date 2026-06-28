@@ -6,7 +6,7 @@ import {
   LuMapPin, LuPhone, LuMail,
 } from 'react-icons/lu';
 import {
-  FaDiscord, FaInstagram, FaLinkedin, FaSlack, FaYoutube, FaWhatsapp, FaTelegram,
+  FaDiscord, FaInstagram, FaLinkedin, FaSlack, FaYoutube, FaWhatsapp, FaTelegram, FaTiktok,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -212,14 +212,10 @@ const Programs = () => {
                 fashion, technology, and business.
               </p>
               <div className="flex flex-wrap items-center gap-3">
-                <a href="https://discord.gg/ges" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaDiscord className="w-5 h-5" /></a>
-                <a href="https://instagram.com/ges" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaInstagram className="w-5 h-5" /></a>
-                <a href="https://linkedin.com/company/ges" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaLinkedin className="w-5 h-5" /></a>
-                <a href="https://slack.com/ges" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaSlack className="w-5 h-5" /></a>
-                <a href="https://youtube.com/@ges" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaYoutube className="w-5 h-5" /></a>
-                <a href="https://x.com/ges" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaXTwitter className="w-5 h-5" /></a>
-                <a href="https://wa.me/256" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaWhatsapp className="w-5 h-5" /></a>
-                <a href="https://t.me/ges" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaTelegram className="w-5 h-5" /></a>
+                <a href="https://x.com/JimmySekasi01" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaXTwitter className="w-5 h-5" /></a>
+                <a href="https://www.instagram.com/jimmy_sekasi?igsh=NjhkYmFydmZoajR1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaInstagram className="w-5 h-5" /></a>
+                <a href="https://youtube.com/@jimmysekasibusinessinstitute?si=mgvhl3oyRneB1jJ4" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaYoutube className="w-5 h-5" /></a>
+                <a href="https://www.tiktok.com/@jimmy.sekasi?_r=1&_t=ZS-97XNlUDtmVk" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaTiktok className="w-5 h-5" /></a>
               </div>
             </div>
 
