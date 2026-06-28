@@ -263,13 +263,13 @@ const JSBI = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => openVideoModal('/2026-02-26-002256024.mp4')}
-                  className="group bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition shadow-2xl hover:shadow-orange-500/50 flex items-center justify-center space-x-2">
+                  className="group bg-orange-600 text-white px-8 py-4 rounded-none font-bold text-lg hover:bg-orange-700 transition shadow-xl hover:shadow-orange-500/20 flex items-center justify-center space-x-2">
                   <span>Explore Programs</span>
                   <LuArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
                 </button>
                 <button
                   onClick={() => openVideoModal('/JSBI VIRTUAL TOUR.mp4')}
-                  className="group bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl flex items-center justify-center space-x-2">
+                  className="group border-2 border-white text-white px-8 py-4 rounded-none font-bold text-lg hover:bg-white hover:text-orange-600 transition flex items-center justify-center space-x-2">
                   <LuPlay className="w-5 h-5" />
                   <span>Watch Video</span>
                 </button>
