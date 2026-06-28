@@ -304,13 +304,14 @@ const JSBI = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section id="about" className="relative bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="lg:col-span-7 xl:col-span-8"
             >
               <div className="flex items-center space-x-2 mb-4">
                 <div className="h-1 w-12 bg-orange-600"></div>
@@ -366,22 +367,25 @@ const JSBI = () => {
                 ))}
               </div>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative">
-                <img
-                  src="/premium_photo-1724026586579-5c413598de2c.jpg"
-                  alt="Students in class"
-                  className="rounded-2xl shadow-2xl"
-                />
-              </div>
-            </motion.div>
           </div>
+        </div>
+
+        {/* Right side image: full height from bottom to top (lesser side) */}
+        <div className="hidden lg:block absolute top-0 right-0 bottom-0 lg:w-[38%] xl:w-[35%]">
+          <img
+            src="/premium_photo-1724026586579-5c413598de2c.jpg"
+            alt="Students in class"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Mobile image fallback */}
+        <div className="lg:hidden px-4 pb-20">
+          <img
+            src="/premium_photo-1724026586579-5c413598de2c.jpg"
+            alt="Students in class"
+            className="w-full rounded-2xl shadow-xl"
+          />
         </div>
       </section>
 
