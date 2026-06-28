@@ -379,11 +379,6 @@ const JSBI = () => {
                   alt="Students in class"
                   className="rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-[#800020] text-white p-8 rounded-2xl shadow-2xl">
-                  <div className="text-5xl font-bold mb-2">15+</div>
-                  <div className="text-lg font-semibold">Years of Excellence</div>
-                  <div className="text-sm text-orange-200">Since 2010</div>
-                </div>
               </div>
             </motion.div>
           </div>
