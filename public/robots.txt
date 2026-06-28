@@ -1,0 +1,6 @@
+# robots.txt for Jimmy Sekasi Business Institute
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jsbi.ges.ac.ug/sitemap.xml

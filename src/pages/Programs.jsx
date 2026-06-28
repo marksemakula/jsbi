@@ -33,6 +33,12 @@ const Programs = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    document.title = 'Programs & Courses | Jimmy Sekasi Business Institute | Vocational Training Uganda';
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', 'View JSBI program guides and admissions info. Certificates & diplomas in cooking, catering, hotel management, business, IT, driving & communication. Vocational school Kampala, Uganda.');
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -208,8 +214,9 @@ const Programs = () => {
                 className="h-28 w-auto mb-4"
               />
               <p className="text-gray-400 mb-6">
-                Empowering young men and women with contemporary skills for careers in culinary arts,
-                fashion, technology, and business.
+                Uganda's top vocational training institute offering certificates and diplomas in
+                cooking, catering, hotel management, business, IT, driving, communication skills,
+                and fashion design. Building career-ready graduates in Kampala since 2010.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <a href="https://x.com/JimmySekasi01" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"><FaXTwitter className="w-5 h-5" /></a>

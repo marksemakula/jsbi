@@ -49,6 +49,12 @@ const JSBI = () => {
   });
 
   useEffect(() => {
+    document.title = 'Jimmy Sekasi Business Institute | Vocational Training Uganda';
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', 'JSBI offers certificates & diplomas in cooking, catering, hotel management, business, IT, driving & communication skills. Top vocational school in Kampala, Uganda.');
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -235,7 +241,7 @@ const JSBI = () => {
               <div className="flex items-center space-x-2 mb-6">
                 <LuGraduationCap className="w-8 h-8 text-orange-400" />
                 <span className="text-orange-400 font-bold tracking-wider uppercase text-sm">
-                  Transform Your Future
+                  Uganda's Premier Vocational Training Institute
                 </span>
               </div>
 
@@ -245,9 +251,9 @@ const JSBI = () => {
               </h1>
 
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                At JSBI, education is about understanding a complex world, thinking critically,
-                and building practical skills that transform lives and communities. Choose from
-                certificates and diplomas in culinary arts, fashion, technology, and business.
+                JSBI is Kampala's leading vocational school for cooking, catering, hotel management,
+                business, IT, driving, and communication skills training. Earn industry-recognized
+                certificates and diplomas that open doors to rewarding careers across Uganda and beyond.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -313,32 +319,32 @@ const JSBI = () => {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Empowering the
-                <span className="text-orange-600"> Whole Person</span>
+                Vocational Training That
+                <span className="text-orange-600"> Transforms Lives</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                In a deliberate plan to build a hybrid mid-level training college, GES took over
-                JSBI to intentionally impart contemporary skills to young men and women of all walks
-                of life, to enhance their potential in being more relevant to their families and
-                communities and be direct partakers in their career destiny.
+                As Uganda's trusted vocational school, JSBI delivers hands-on training in cooking,
+                catering, hotel management, business administration, IT, driving, and communication
+                skills. We equip young men and women with career-ready expertise through certificates
+                and diplomas recognized across East Africa.
               </p>
 
               <div className="space-y-6">
                 {[
                   {
                     icon: LuUsers,
-                    title: 'Hands-On Training',
-                    description: 'Learn by doing with real-world equipment and industry-standard facilities'
+                    title: 'Hands-On Vocational Training',
+                    description: 'Learn cooking, catering, and hotel management with real-world equipment and industry-standard kitchens and facilities'
                   },
                   {
                     icon: LuAward,
                     title: 'Industry Partnerships',
-                    description: 'Direct job placement support through our network of 20+ partner companies'
+                    description: 'Direct job placement in hotels, restaurants, and businesses through our network of 20+ partner companies in Uganda'
                   },
                   {
                     icon: LuTrendingUp,
-                    title: 'Flexible Learning',
-                    description: 'Short courses, certificates, and diplomas designed to fit your schedule'
+                    title: 'Flexible Courses',
+                    description: 'Short courses, certificates, and diplomas in IT, business, driving, and communication — designed to fit your schedule'
                   }
                 ].map((feature, index) => (
                   <motion.div
@@ -530,8 +536,9 @@ const JSBI = () => {
                 className="h-28 w-auto mb-4"
               />
               <p className="text-gray-700 mb-6">
-                Empowering young men and women with contemporary skills for careers in
-                culinary arts, fashion, technology, and business.
+                Uganda's top vocational training institute offering certificates and diplomas in
+                cooking, catering, hotel management, business, IT, driving, communication skills,
+                and fashion design. Building career-ready graduates in Kampala since 2010.
               </p>
               <div className="social-icons flex flex-wrap items-center gap-3">
                 <a href="https://x.com/JimmySekasi01" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
