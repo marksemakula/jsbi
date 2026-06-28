@@ -536,9 +536,8 @@ const JSBI = () => {
                 className="h-28 w-auto mb-4"
               />
               <p className="text-gray-700 mb-6">
-                Uganda's top vocational training institute offering certificates and diplomas in
-                cooking, catering, hotel management, business, IT, driving, communication skills,
-                and fashion design. Building career-ready graduates in Kampala since 2010.
+                Empowering young men and women with contemporary skills for careers in
+                culinary arts, fashion, technology, and business.
               </p>
               <div className="social-icons flex flex-wrap items-center gap-3">
                 <a href="https://x.com/JimmySekasi01" target="_blank" rel="noopener noreferrer" className="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-orange-600 hover:text-white transition text-gray-700">
@@ -576,7 +575,7 @@ const JSBI = () => {
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
                   <LuMapPin className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">Kampala, Uganda</span>
+                  <span className="text-gray-700">4925 Mbogo Rd, Kampala, Uganda</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <LuPhone className="w-5 h-5 text-orange-600 flex-shrink-0" />
@@ -584,7 +583,7 @@ const JSBI = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <LuMail className="w-5 h-5 text-orange-600 flex-shrink-0" />
-                  <span className="text-gray-700">info@jsbi.ac.ug</span>
+                  <span className="text-gray-700">info@gibst.ac.ug</span>
                 </li>
               </ul>
             </div>
