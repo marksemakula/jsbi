@@ -215,12 +215,10 @@ const JSBI = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="/JimmySekasi.png"
-            alt="Jimmy Sekasi Business Institute"
-            className="w-full h-full object-cover"
-          />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{ backgroundImage: "url('/JimmySekasi.png')" }}
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-orange-900/95 via-red-900/90 to-orange-800/85"></div>
         </div>
 
