@@ -13,14 +13,14 @@ import { FaXTwitter } from 'react-icons/fa6';
 const documents = [
   {
     id: 1,
-    title: 'JSBI Program Guide 2026-1',
+    title: 'GIBST Program Guide 2026-1',
     description:
       'Comprehensive program overview: certificates, diplomas, course durations, and career pathways.',
     href: '/JBSI flyer A5 final 2026-1.pdf',
   },
   {
     id: 2,
-    title: 'JSBI Admissions Guide 2026-2',
+    title: 'GIBST Admissions Guide 2026-2',
     description:
       'Admissions information, enrollment dates, fee structure, and step‑by‑step application guide.',
     href: '/JBSI flyer A5 final 2026-2.pdf',
@@ -33,9 +33,9 @@ const Programs = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    document.title = 'Programs & Courses | Jimmy Sekasi Business Institute | Vocational Training Uganda';
+    document.title = 'Programs & Courses | Gombe Institute of Business Science & Technology (GIBST) | Vocational Training Uganda';
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', 'View JSBI program guides and admissions info. Certificates & diplomas in cooking, catering, hotel management, business, IT, driving & communication. Vocational school Kampala, Uganda.');
+    if (meta) meta.setAttribute('content', 'View GIBST program guides and admissions info. Certificates & diplomas in cooking, catering, hotel management, business, IT, driving & communication. Vocational school Kampala, Uganda.');
   }, []);
 
   useEffect(() => {
@@ -55,18 +55,18 @@ const Programs = () => {
           : 'bg-gradient-to-r from-orange-600 to-red-600 py-5'
           }`}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex flex-col">
-              <h1 className={`text-xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-                Jimmy Sekasi Business Institute
+              <h1 className={`text-xl font-bold whitespace-nowrap ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+                Gombe Institute of Business Science & Technology (GIBST)
               </h1>
               <p className={`text-xs font-medium tracking-wider ${scrolled ? 'text-orange-600' : 'text-orange-100'}`}>
                 SKILLS FOR LIFE, CAREERS FOR TOMORROW
               </p>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6">
               <Link to="/" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
                 Home
               </Link>
@@ -77,7 +77,7 @@ const Programs = () => {
               <a href="/#admissions" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>Admissions</a>
               <a href="/#about" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>About</a>
               <a href="/#contact" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>Contact</a>
-              <Link to="/apply" className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition font-semibold shadow-lg hover:shadow-xl">
+              <Link to="/apply" className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition font-semibold shadow-lg hover:shadow-xl whitespace-nowrap">
                 Apply Now
               </Link>
             </div>
@@ -210,7 +210,7 @@ const Programs = () => {
             <div className="md:col-span-2">
               <img
                 src="/Jimmy Sekasi Business Institute Logo.png"
-                alt="JSBI Logo"
+                alt="GIBST Logo"
                 className="h-28 w-auto mb-4"
               />
               <p className="text-gray-400 mb-6">
@@ -259,7 +259,7 @@ const Programs = () => {
 
           <div className="pt-2 pb-2 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2026 Jimmy Sekasi Business Institute. All rights reserved.
+              © 2026 Gombe Institute of Business Science & Technology (GIBST). All rights reserved.
             </p>
             <div className="flex items-center gap-8">
               <div className="flex space-x-6 text-sm">

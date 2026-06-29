@@ -53,9 +53,9 @@ const JSBI = () => {
   });
 
   useEffect(() => {
-    document.title = 'Jimmy Sekasi Business Institute | Vocational Training Uganda';
+    document.title = 'Gombe Institute of Business Science & Technology (GIBST) | Vocational Training Uganda';
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', 'JSBI offers certificates & diplomas in cooking, catering, hotel management, business, IT, driving & communication skills. Top vocational school in Kampala, Uganda.');
+    if (meta) meta.setAttribute('content', 'GIBST offers certificates & diplomas in cooking, catering, hotel management, business, IT, driving & communication skills. Top vocational school in Kampala, Uganda.');
   }, []);
 
   useEffect(() => {
@@ -138,12 +138,12 @@ const JSBI = () => {
           : 'bg-gradient-to-r from-orange-600 to-red-600 py-5'
           }`}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Brand Title */}
             <div className="flex flex-col">
-              <h1 className={`text-xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-                Jimmy Sekasi Business Institute
+              <h1 className={`text-xl font-bold whitespace-nowrap ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+                Gombe Institute of Business Science & Technology (GIBST)
               </h1>
               <p className={`text-xs font-medium tracking-wider ${scrolled ? 'text-orange-600' : 'text-orange-100'}`}>
                 SKILLS FOR LIFE, CAREERS FOR TOMORROW
@@ -151,7 +151,7 @@ const JSBI = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6">
               <Link to="/" className={`font-medium hover:text-orange-600 transition ${scrolled ? 'text-gray-700' : 'text-white'}`}>
                 Home
               </Link>
@@ -172,7 +172,7 @@ const JSBI = () => {
               </a>
               <button
                 onClick={() => setIsApplyModalOpen(true)}
-                className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition font-semibold shadow-lg hover:shadow-xl">
+                className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition font-semibold shadow-lg hover:shadow-xl whitespace-nowrap">
                 Apply Now
               </button>
             </div>
@@ -236,7 +236,7 @@ const JSBI = () => {
               <div className="mb-6">
                 <img
                   src="/Jimmy Sekasi Business Institute Logo.png"
-                  alt="JSBI Logo"
+                  alt="GIBST Logo"
                   className="h-48 w-auto drop-shadow-2xl"
                 />
               </div>
@@ -253,7 +253,7 @@ const JSBI = () => {
               </h1>
 
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                JSBI is Kampala's leading vocational school for cooking, catering, hotel management,
+                GIBST is Kampala's leading vocational school for cooking, catering, hotel management,
                 business, IT, driving, and communication skills training. Earn industry-recognized
                 certificates and diplomas that open doors to rewarding careers across Uganda and beyond.
               </p>
@@ -318,7 +318,7 @@ const JSBI = () => {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="h-1 w-12 bg-orange-600"></div>
                 <span className="text-orange-600 font-bold tracking-wider uppercase text-sm">
-                  Why JSBI
+                  Why GIBST
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -326,7 +326,7 @@ const JSBI = () => {
                 <span className="text-orange-600"> Transforms Lives</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                As Uganda's trusted vocational school, JSBI delivers hands-on training in cooking,
+                As Uganda's trusted vocational school, GIBST delivers hands-on training in cooking,
                 catering, hotel management, business administration, IT, driving, and communication
                 skills. We equip young men and women with career-ready expertise through certificates
                 and diplomas recognized across East Africa.
@@ -533,7 +533,7 @@ const JSBI = () => {
             <div className="md:col-span-2">
               <img
                 src="/Jimmy Sekasi Business Institute Logo.png"
-                alt="JSBI Logo"
+                alt="GIBST Logo"
                 className="h-28 w-auto mb-4"
               />
               <p className="text-gray-700 mb-6">
@@ -597,7 +597,7 @@ const JSBI = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-white/90 text-sm">
-                © 2026 Jimmy Sekasi Business Institute. All rights reserved.
+                © 2026 Gombe Institute of Business Science & Technology (GIBST). All rights reserved.
               </p>
               <div className="flex items-center gap-8">
                 <div className="flex space-x-6 text-sm">

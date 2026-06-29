@@ -1,4 +1,4 @@
-# robots.txt for Jimmy Sekasi Business Institute
+# robots.txt for Gombe Institute of Business Science & Technology (GIBST)
 User-agent: *
 Allow: /
 
