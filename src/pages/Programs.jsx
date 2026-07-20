@@ -259,7 +259,7 @@ const Programs = () => {
 
           <div className="pt-2 pb-2 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2026 Gombe Institute of Business Science & Technology (GIBST). All rights reserved.
+              © 2026 Gombe Institute of Business Science & Technology (GIBST). All rights reserved. A member of <a href="https://ges.ac.ug" target="_blank" rel="noopener" className="hover:underline">Gombe Education Service</a>.
             </p>
             <div className="flex items-center gap-8">
               <div className="flex space-x-6 text-sm">

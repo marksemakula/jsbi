@@ -597,7 +597,7 @@ const JSBI = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-white/90 text-sm">
-                © 2026 Gombe Institute of Business Science & Technology (GIBST). All rights reserved.
+                © 2026 Gombe Institute of Business Science & Technology (GIBST). All rights reserved. A member of <a href="https://ges.ac.ug" target="_blank" rel="noopener" className="hover:underline">Gombe Education Service</a>.
               </p>
               <div className="flex items-center gap-8">
                 <div className="flex space-x-6 text-sm">
